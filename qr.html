@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="qr.css">
+</head>
+<body>
+    
+   <div class="Container">
+    <p> Enter Your Content</p>
+    <input type="text" id="txt">
+
+    <div id="QRImage">
+        <img src="" id="Image"/> 
+    </div>
+
+<button onclick="Generate()" class="button-29"> Generate Qr</button>
+   </div>
+   <script>
+
+const text=document.getElementById("txt");
+const Imgsrc=document.getElementById("Image");
+
+function Generate()
+{
+    Imgsrc.src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+text.value;
+}
+   </script> 
+
+</body>
+</html>
